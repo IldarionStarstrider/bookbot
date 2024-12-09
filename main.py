@@ -9,7 +9,6 @@ def wordcounter(string):
     count = 0
     for word in list_words:
         count += 1
-    print(count)
     return count
 
 #counts the number of times a character is used in the text.
@@ -21,13 +20,33 @@ def charcounter(string):
             dict[character] += 1
         else:
             dict[character] = 1
-    print(dict)
     return dict
 
+#converts the charcounter dictionary to a list of dictionaries.
+def convert_dict(dict):
+    new_list = []
+    for k, v in dict:
+        
+    print(new_list)
 
 
 
 
-main()
-wordcounter(main())
-charcounter(main())
+
+#creates a report of frankenstein.txt
+#def create_report(string):
+    print("--- Begin report of books/frankenstein.txt ---")
+    print(f"{wordcounter(string)} words found in the document")
+    dict = charcounter(string)
+    for key in dict:
+        print(f"The {key} character was found {dict[key]} times")
+
+
+
+
+
+
+
+convert_dict(charcounter(main()))
+
+#create_report(main())
