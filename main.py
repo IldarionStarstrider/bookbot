@@ -12,10 +12,17 @@ def wordcounter(string):
     print(count)
     return count
 
-#counts the number of times each character is mentioned in the text.
+#counts the number of times a character is used in the text.
 def charcounter(string):
-
-
+    lowered_string = string.lower()
+    dict = {}
+    for character in lowered_string:
+        if character in dict:
+            dict[character] += 1
+        else:
+            dict[character] = 1
+    print(dict)
+    return dict
 
 
 
@@ -23,3 +30,4 @@ def charcounter(string):
 
 main()
 wordcounter(main())
+charcounter(main())
